@@ -1,0 +1,191 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4747;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #ff4747;
+}
+
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4747;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0P1CMABVoRpe1eL9dEQVkOkts83iK8_yafZ9hotAyTGXJfNo5tgmCURI3_vH7mpykmgps_iEfgCUhrkzegwykqIQGSoH_twcr03ngQg5xOf9txZ0xl6P2IxAfMW_Mre4NwdKWJXMQ7n9t/s1600/best_animes.png') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Opacidade 40% */
+    z-index: 1;
+}
+
+.hero .overlay {
+    color: #ffffff;
+    padding: 20px;
+    z-index: 2; /* Garante que o conteúdo fique acima da sobreposição */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff4747;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff4747;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+}
+
+.hero .cta:hover {
+    background: #d63c3c;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.anime-cards {
+    padding: 50px 20px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.anime-cards h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ff4747;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #ff4747;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ff4747;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 14px;
+    color: #d3d3d3;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 71, 71, 0.5);
+}
